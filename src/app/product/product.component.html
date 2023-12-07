@@ -1,0 +1,13 @@
+<div class="product-container">
+    <p>Product component</p>
+<p>{{ 'Salut' | uppercase }}</p>
+<p > {{'merci' | firstLetter}}</p>
+
+<div *ngFor="let product of products">
+    {{ product.id }}
+    <a [routerLink]="['/product-detail', product.id]">{{ product.name }}</a> <mark> {{ product.price }} </mark>
+</div>
+
+<p [ngClass]="{ red: valueColor%2, blue: !(valueColor%2) }">{{ valueColor }}</p>
+<button (click)="up()">Changer la couleur</button>
+</div>
